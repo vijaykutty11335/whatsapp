@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function ChatCard({id,name,profile,setHome}) {
   return (
-    <div className='ChatCard' onClick={()=>{setHome(false)}}>
+    <div className='ChatCard' onClick={()=>{setHome(id)}}>
       <div className='w-[14%] h-[100%]'> 
         <img src={profile} alt="ProfileImg" className='rounded-full w-[100%] h-[100%]'/>
       </div>

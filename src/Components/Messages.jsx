@@ -4,11 +4,13 @@ import ChatBox from './ChatBox'
 import Home from './Home'
 
 export default function Messages() {
-    const [home,setHome] = useState(true)
+    const [id,setid] = useState(-1)
+    console.log(id)
+
     return (
         <div className='Messages'>
-            <Chats />
-            {home?<Home/>:<ChatBox setHome={setHome} />}
+            <Chats setHome={setid}/>
+            {id>-1?<ChatBox id={id}/>:<Home/>}
         </div>
     )
 }
