@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import './App.css'
-import Messages from './Components/Messages'
 import Navbar from './Components/Navbar'
+import { Outlet } from 'react-router-dom'
 
 function App() {
   
@@ -10,7 +10,7 @@ function App() {
   return (
     <div className='App'>
       <Navbar/>
-      <Messages/>
+      <Outlet/>
     </div>
   )
 }
